@@ -30,7 +30,7 @@ int main() {
 
 ### Explanation:
 
-#### include <stdio.h>:
+#### #include <stdio.h>:
 This line includes the standard input-output library, which provides the printf function.
 #### int main(): 
 The main function is the entry point of a C program.
