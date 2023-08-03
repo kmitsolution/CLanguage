@@ -1,6 +1,6 @@
 # CLanguage
 C Language to learn By KMIT Solutions Services
-## Core (With Quizes and Assignment)
+## Core (With Quizes and Assignments)
 1. Introduction to C
 2. C Instructions
 3. C Data types in Detail
