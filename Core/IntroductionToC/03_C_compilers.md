@@ -5,12 +5,36 @@ The compilation process involves several stages:
 
 ### Preprocessing:
 The preprocessor stage processes the C source code before actual compilation. It handles directives that start with the "#" symbol, such as #include (for including header files) and #define (for macros). The preprocessor replaces these directives with the appropriate code, preparing the source code for the next stage.
+
+For example: If you include <b> #include <stdio.h> </b> then preprocessor add the code of stdio.h in to your program.
+
+With below command in gcc compiler to execute the preprocessor step. (let's consider main.c is a source C lanaguage code) 
+```
+gcc -E main.c
+```
 ### Compilation: 
 The compiler takes the preprocessed C source code and translates it into assembly code or intermediate code specific to the target architecture. The generated code represents the program's instructions in a human-readable format.
+
+Below command is compiling the code ( it is performing 2 steps, Preporocessing and Converting the code into assembly language)
+```
+gcc -S main.c
+```
+It will produce a file <b> main.s </b> which includes the assembly code.
+
 ### Assembly:
 If the compiler generates assembly code, the assembler converts the assembly code into machine code, which is a low-level representation of the program instructions, understood by the computer's hardware.
+
+Below command is converting main.c file code into binary code and you can produce a binary file
+```
+gcc main.c -o main.o
+```
 ### Linking:
 The linker combines the machine code generated from different source files and library files to produce an executable binary file. It resolves external references and ensures all the required functions and libraries are present.
+
+```
+gcc main.c 
+```
+It will perform all the steps like preprocessing,compiling,assembly and produce a.exe in windows a.out in linux.
 
 Once the compilation process is complete, the resulting executable file can be executed directly on the target computer.
 
