@@ -4,6 +4,23 @@ C programming language is a powerful and widely used general-purpose programming
 Key features of the C programming language include:
 ### Procedural Language: 
 C is a procedural programming language, which means it follows a step-by-step procedure for solving problems. It uses functions to structure the code and divide the program into smaller, manageable tasks.
+
+Below is the example for procedural code in c. I have created 2 functions/procedures called calc1() and calc2() and invoked in main()
+```c
+#include <stdio.h>
+//Procedure1
+void calc1(){
+    printf("This is calc1");
+}
+//Procedure2
+void calc2(){
+    printf("\nThis is calc2");
+}
+void main(){
+   calc1();//call the calc1()
+   calc2();//call the calc2()
+}
+```
 ### Portability: 
 C programs can be easily ported or moved across different platforms and operating systems with minimal changes. This portability is one of the reasons for C's popularity in system-level programming.
 ### Efficiency:
