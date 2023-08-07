@@ -3,6 +3,8 @@ A C compiler is a software tool that translates the human-readable C programming
 
 The compilation process involves several stages:
 
+<img src="https://github.com/kmitsolution/CLanguage/blob/main/Core/images/CCompiler.jpg" width=900 height=500 />
+
 ### Preprocessing:
 The preprocessor stage processes the C source code before actual compilation. It handles directives that start with the "#" symbol, such as #include (for including header files) and #define (for macros). The preprocessor replaces these directives with the appropriate code, preparing the source code for the next stage.
 
