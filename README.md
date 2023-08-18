@@ -1,7 +1,7 @@
 # CLanguage
 C Language to learn By KMIT Solutions Services
 ## Core (With Quizes and Assignments)
-1. Introduction to C
+1. <a href="https://github.com/kmitsolution/CLanguage/tree/main/Core/01_IntroductionToC"> Introduction to C </a>
 2. C Instructions
 3. C Data types in Detail
 4. Different Operators in C
