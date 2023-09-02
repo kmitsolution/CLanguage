@@ -163,3 +163,143 @@ In this program:
 7. The loop continues until `i` reaches `n`, at which point the program exits the loop.
 
 This program will generate and print the Fibonacci series up to the specified number of terms (`n`).
+
+
+### Reverse of a number
+You can reverse a number in C using a `for` loop by extracting the digits of the number from right to left. Here's an example of how to reverse a number using a `for` loop:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num, reversedNum = 0, remainder;
+
+    // Prompt the user to enter a number
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    while (num != 0) {
+        remainder = num % 10; // Get the rightmost digit
+        reversedNum = reversedNum * 10 + remainder; // Append the digit to the reversed number
+        num /= 10; // Remove the rightmost digit
+    }
+
+    printf("Reversed number: %d\n", reversedNum);
+
+    return 0;
+}
+```
+
+In this program:
+
+1. The user is prompted to enter an integer.
+
+2. Inside the `while` loop, the rightmost digit of the number is extracted using the modulo operator `%` and stored in the `remainder` variable.
+
+3. The `reversedNum` is updated by multiplying it by 10 (shifting its digits to the left) and adding the `remainder`.
+
+4. The rightmost digit is removed from the original number by dividing it by 10.
+
+5. The loop continues until the original number becomes 0.
+
+6. Finally, the program prints the reversed number.
+
+This program reverses an integer by iteratively extracting and appending its digits using a `for` loop.
+
+### Plaindrome of a number
+To check if a number is a palindrome or not in C, you can reverse the number and compare it with the original number. If they are the same, the number is a palindrome. Here's an example of how to do this:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num, originalNum, reversedNum = 0, remainder;
+
+    // Prompt the user to enter a number
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    originalNum = num; // Store the original number for comparison
+
+    while (num != 0) {
+        remainder = num % 10; // Get the rightmost digit
+        reversedNum = reversedNum * 10 + remainder; // Append the digit to the reversed number
+        num /= 10; // Remove the rightmost digit
+    }
+
+    if (originalNum == reversedNum) {
+        printf("%d is a palindrome.\n", originalNum);
+    } else {
+        printf("%d is not a palindrome.\n", originalNum);
+    }
+
+    return 0;
+}
+```
+
+In this program:
+
+1. The user is prompted to enter an integer.
+
+2. Inside the `while` loop, the rightmost digit of the number is extracted using the modulo operator `%` and stored in the `remainder` variable.
+
+3. The `reversedNum` is updated by multiplying it by 10 (shifting its digits to the left) and adding the `remainder`.
+
+4. The rightmost digit is removed from the original number by dividing it by 10.
+
+5. The loop continues until the original number becomes 0.
+
+6. After the loop, the program compares the `originalNum` with the `reversedNum` to determine if the number is a palindrome.
+
+This program checks if an integer is a palindrome by reversing it and comparing it with the original number. If they are the same, it's a palindrome; otherwise, it's not.
+
+### ArmStrong
+An Armstrong number (also known as a narcissistic number or a pluperfect digital invariant) is a number that is equal to the sum of its own digits raised to the power of the number of digits. In other words, an n-digit number is an Armstrong number if the sum of its digits each raised to the nth power is equal to the number itself.
+
+To check if a number is an Armstrong number in C, you can calculate the sum of its digits raised to the appropriate power (which is the number of digits), and then compare it to the original number. Here's an example of how to do this:
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num, originalNum, remainder, n, result = 0;
+
+    // Prompt the user to enter a number
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    originalNum = num; // Store the original number for comparison
+
+    // Calculate the number of digits in the number
+    n = (int)log10(num) + 1;
+
+    while (num != 0) {
+        remainder = num % 10; // Get the rightmost digit
+        result += pow(remainder, n); // Add the digit raised to the power of n to the result
+        num /= 10; // Remove the rightmost digit
+    }
+
+    if (originalNum == result) {
+        printf("%d is an Armstrong number.\n", originalNum);
+    } else {
+        printf("%d is not an Armstrong number.\n", originalNum);
+    }
+
+    return 0;
+}
+```
+
+In this program:
+
+1. The user is prompted to enter an integer.
+
+2. Inside the `while` loop, the rightmost digit of the number is extracted using the modulo operator `%` and stored in the `remainder` variable.
+
+3. The `result` is updated by adding the `remainder` raised to the power of `n`, where `n` is the number of digits in the original number.
+
+4. The rightmost digit is removed from the original number by dividing it by 10.
+
+5. After the loop, the program compares the `originalNum` with the `result` to determine if the number is an Armstrong number.
+
+This program checks if an integer is an Armstrong number by calculating the sum of its digits raised to the appropriate power and comparing it to the original number. If they are the same, it's an Armstrong number; otherwise, it's not.
