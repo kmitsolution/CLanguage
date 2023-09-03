@@ -1,3 +1,4 @@
+# Case Control in C
 The `switch` statement in C is used to select one of many code blocks to execute based on the value of an expression. It provides a way to simplify and optimize code when you have multiple conditions to check against a single variable. Here's the basic syntax of a `switch` statement:
 
 ```c
