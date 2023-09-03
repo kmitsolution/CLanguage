@@ -5,8 +5,13 @@ In C, derived data types are user-defined data types that are created by combini
    ```c
    int numbers[5]; // Declares an integer array of size 5
    ```
+   **Strings** String is the collection of characters
 
-2. **Pointers**: Pointers are variables that store memory addresses. They are used to point to other data types, allowing for dynamic memory allocation and manipulation.
+   ```c
+   char names[5]; // Declare a string with 5 character length
+   ```
+
+3. **Pointers**: Pointers are variables that store memory addresses. They are used to point to other data types, allowing for dynamic memory allocation and manipulation.
 
    ```c
    int *ptr; // Declares a pointer to an integer
