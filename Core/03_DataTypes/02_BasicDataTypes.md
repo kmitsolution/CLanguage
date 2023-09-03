@@ -1,3 +1,4 @@
+# Primitive or Basic Data Types in C
 In C, there are several basic data types that are used to declare variables. These data types represent fundamental types of data. Here are the basic data types in C:
 
 1. **int**: Used to store integer values. It can hold both positive and negative whole numbers.
