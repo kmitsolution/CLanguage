@@ -1,16 +1,48 @@
 # Primitive or Basic Data Types in C
 In C, there are several basic data types that are used to declare variables. These data types represent fundamental types of data. Here are the basic data types in C:
 
-1. **int**: Used to store integer values. It can hold both positive and negative whole numbers.
-    
-    1.1 Represents integer values, both positive and negative.
-   
-    1.2 Typically, it's 4 bytes in size on most systems, but this can vary depending on the compiler and system architecture
+## 1. Integer data types
 
-   Example:
+In C, the standard integer data types, including `short`, `long`, and specific bit-width types like `int32_t` and `int64_t`, are used to represent different ranges of integer values. Here's an overview of these common integer data types:
+
+a. **`short(2 Bye Size)`**:
+   - The `short` data type is used to represent integers with a relatively small range of values. It typically uses 16 bits (2 bytes) of memory, but its size may vary depending on the platform.
+   - The range of values that can be stored in a `short` variable is implementation-dependent, but it is often from -32,768 to 32,767 in a two's complement representation.
+
    ```c
-   int age = 25;
+   short myShort = 32767;
    ```
+
+b. **`long or int(4 Byte Size) `**:
+   - The `long` data type is used to represent integers with a larger range compared to `int`. It typically uses 32 bits (4 bytes) of memory, but its size may vary depending on the platform.
+   - The range of values that can be stored in a `long` variable is implementation-dependent, but it is often from approximately -2.1 billion to 2.1 billion in a two's complement representation.
+
+   ```c
+   long myLong = 2147483647;
+   ```
+
+c. **`int32_t`** (from `<stdint.h>`):
+   - The `int32_t` data type is defined in the `<stdint.h>` header and is designed to provide a 32-bit signed integer with a well-defined range.
+   - `int32_t` uses exactly 32 bits (4 bytes) of memory, and its range is from -2,147,483,648 to 2,147,483,647 in a two's complement representation.
+
+   ```c
+   #include <stdint.h>
+
+   int32_t myInt32 = 2147483647;
+   ```
+
+d. **`int64_t`** (from `<stdint.h>`):
+   - The `int64_t` data type is also defined in the `<stdint.h>` header and provides a 64-bit signed integer with a well-defined range.
+   - `int64_t` uses exactly 64 bits (8 bytes) of memory, and its range is from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 in a two's complement representation.
+
+   ```c
+   #include <stdint.h>
+
+   int64_t myInt64 = 9223372036854775807LL;
+   ```
+
+Using the fixed-width integer types like `int32_t` and `int64_t` from `<stdint.h>` is recommended when you need precise control over the size and range of your integer variables. These types ensure portability across different systems and compilers, as their sizes are defined in terms of a specific number of bits rather than relying on the platform's default sizes.
+
 
 2. **float**: Used to store single-precision floating-point numbers, which are numbers with a decimal point.
 
@@ -34,19 +66,13 @@ In C, there are several basic data types that are used to declare variables. The
    double pi = 3.14159265359;
    ```
 
-5. **char**: Used to store a single character. Characters are enclosed in single quotes.
+4. **char**: Used to store a single character. Characters are enclosed in single quotes.
 
    Example:
    ```c
    char grade = 'A';
    ```
 
-6. **_Bool**: Used to store Boolean values, which can be either true (1) or false (0).
-
-   Example:
-   ```c
-   _Bool isStudent = 1;  // true
-   ```
 
 7. **void**: Typically used as a return type for functions that do not return a value.
 
