@@ -50,6 +50,23 @@ Control flow instructions in the C programming language are used to determine th
     }
 
   ```
+### Example
+```c
+#include <stdio.h>
+int main() {
+
+  int n;
+  printf("\nEnter a number");
+  scanf("%d",&n);
+  if(n>=10){
+    printf("Number is >=10");
+  }
+  else
+    printf("\nNumber is <10");
+    return 0;
+}
+
+```
    - **else if Statement:** Allows you to test multiple conditions in sequence.
      ```c
      if (condition1) {
@@ -84,7 +101,27 @@ Control flow instructions in the C programming language are used to determine th
     }
 
   ```
+### Example
+```c
 
+
+#include <stdio.h>
+int main() {
+
+  int marks;
+  printf("\nEnter the marks of student");
+  scanf("%d",&marks);
+  if(marks>=90)
+    printf("\n Your Grade is A");
+  else if(marks>=80)  
+    printf("\n Your Grade is B");
+  else if(marks>=70)  
+    printf("\n Your Grade is C");
+  else
+    printf("\n Your Grade is D")  ;
+    return 0;
+}
+```
 3. **Switch Statement:** Used to select one of many code blocks to be executed based on the value of an expression.
    ```c
    switch (expression) {
