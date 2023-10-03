@@ -5,7 +5,7 @@ In C, there are several basic data types that are used to declare variables. The
 
 In C, the standard integer data types, including `short`, `long`, and specific bit-width types like `int32_t` and `int64_t`, are used to represent different ranges of integer values. Here's an overview of these common integer data types:
 
-a. **`short(2 Bye Size)`**:
+a. **`short(2 Byte Size)`**:
    - The `short` data type is used to represent integers with a relatively small range of values. It typically uses 16 bits (2 bytes) of memory, but its size may vary depending on the platform.
    - The range of values that can be stored in a `short` variable is implementation-dependent, but it is often from -32,768 to 32,767 in a two's complement representation.
 
