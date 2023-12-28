@@ -67,14 +67,20 @@ Using the fixed-width integer types like `int32_t` and `int64_t` from `<stdint.h
    ```
 
 4. **char**: Used to store a single character. Characters are enclosed in single quotes.
-
+   In C, a character variable holds the character's ASCII value (instead of the character itself). For instance, “A” has the ASCII value of 65. What this means is 
+     that, if you assign 'A' to a character variable, 65 is stored in the variable rather than 'A' itself.
+   ```
+   AScii Value of 'A-Z' = 65-90
+   AScii Value of 'a-z' = 97-122
+   AScii Value of '0-9' = 48-57
+```
    Example:
    ```c
    char grade = 'A';
    ```
 
 
-7. **void**: Typically used as a return type for functions that do not return a value.
+6. **void**: Typically used as a return type for functions that do not return a value.
 
    Example:
    ```c
